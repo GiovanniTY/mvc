@@ -10,7 +10,7 @@ class ArticleController
         $articles = $this->getArticles();
 
         // Load the view
-        require 'View/articles/index.php';
+        require '../View/article/index.php';
     }
 
     // Note: this function can also be used in a repository - the choice is yours
@@ -55,7 +55,7 @@ class ArticleController
                 $article = new Article($rawArticle['title'], $rawArticle['description'], $rawArticle['publish_date']);
                 
                 // Load the view for showing the article details
-                require 'View/articles/show.php';
+                require '../View/articles/show.php';
             } else {
                 echo "Article not found.";
             }
