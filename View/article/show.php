@@ -1,6 +1,10 @@
 <?php require 'View/includes/header.php'?>
 
-<?php // Use any data loaded in the controller here ?>
+<?php include '/Controller/ArticleController.php';
+include '/Controller/HomepageController.php';
+include 'engine.php'; ?>
+
+
 
 <section>
     <h1><?= $article->title ?></h1>
