@@ -1,6 +1,8 @@
-<?php require './includes/header.php'?>
+<?php require 'View/includes/header.php'?>
 
-<?php // Use any data loaded in the controller here?>
+<?php // Use any data loaded in the controller here
+require 'config/db-config.php'?>
+
 
 
 <section>
@@ -9,4 +11,4 @@
     <p>Put your content here.</p>
 </section>
 
-<?php require './includes/footer.php'?>
+<?php require 'View/includes/footer.php'?>

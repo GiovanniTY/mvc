@@ -1,25 +1,37 @@
 <?php
 
-declare(strict_types=1);
+class Article {
+    private int $id;
+    private string $title;
+    private string $description;
+    private string $publish_date;
 
-class Article
-{
-    public string $title;
-    public ?string $description;
-    public ?string $publishDate;
-
-    public function __construct(string $title, ?string $description, ?string $publishDate)
-    {
+    public function __construct(int $id, string $title, string $description, string $publish_date) {
+        $this->id = $id;
         $this->title = $title;
         $this->description = $description;
-        $this->publishDate = $publishDate;
+        $this->publish_date = $publish_date;
     }
 
-    public function formatPublishDate($format = 'DD-MM-YYYY')
-    {
-        // TODO: return the date in the required format
-        $date = new DateTime($this->publishDate);
-        return $date->format($format);
+    public function getId(): int {
+        return $this->id;
+    }
+
+    public function getTitle(): string {
+        return $this->title;
+    }
+
+    public function getDescription(): string {
+        return $this->description;
+    }
+
+    public function getPublishDate(): string {
+        return $this->publish_date;
+    }
+
+    public function formatPublishDate(): string {
+        $date = new DateTime($this->publish_date);
+        return $date->format('d M Y');
     }
 }
-
+?>
